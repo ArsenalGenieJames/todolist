@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css' rel='stylesheet' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-12 mx-auto">
+                <h1 class="text-center mb-4">Todo List</h1>
+                <div class="todo-container">
+                    <div class="container">
+                        <div class="row g-2"> 
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <button class="btn btn-primary w-100" id="addTask">Add Task</button>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <button class="btn btn-primary w-100" id="latestTask">Latest</button>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <button class="btn btn-primary w-100" id="completeTask">Complete</button>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <button class="btn btn-danger w-100" id="clearTask">Clear Task</button>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control mt-3" id="taskInput" placeholder="Add new task...">
+                    </div>
+                    <ul class="list-group mt-3" id="taskList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>
