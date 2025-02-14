@@ -16,15 +16,37 @@
     <title>Todo List</title>
   </head>
   <style>
+    body {
+      background-image: url(https://i.pinimg.com/1200x/fb/f5/b0/fbf5b066d3070121607e6d1e66d9fc70.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
     .btn {
       background-color: #3b6790;
     }
     .btn:hover {
-      background-color: #fba518;
+      background-image: url(https://i.pinimg.com/1200x/fb/f5/b0/fbf5b066d3070121607e6d1e66d9fc70.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
       border: none;
     }
     nav {
       background-color: #3b6790;
+    }
+    .editable {
+      width: 50%;
+    }
+    .listtask {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 120vh;
+      height: 80vh;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(7.5px);
+      -webkit-backdrop-filter: blur(7.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
     }
   </style>
   <body>
@@ -36,43 +58,42 @@
       </div>
     </nav>
 
-    <div class="container mt-4">
+    <div class="listtask">
       <div class="row">
         <div class="col-lg-8 col-md-10 col-12 mx-auto">
           <div class="todo-container">
             <div class="container">
               <div class="row g-2">
-                <div class="col-12 col-sm-6 col-md-3">
-                  <button class="btn text-white w-100" id="addTask">
+                <div class="col-12 col-md-8">
+                  <input
+                    type="text"
+                    class="form-control mt-3"
+                    id="taskInput"
+                    placeholder="Add new task..."
+                  />
+                  <ul class="list-group mt-3" id="taskList"></ul>
+                </div>
+                <div
+                  class="col-12 col-md-4 d-flex flex-column align-items-end mt-4"
+                >
+                  <button class="btn text-white w-100 mb-2" id="addTask">
                     Add Task
                   </button>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                  <button class="btn text-white w-100" id="latestTask">
+                  <button class="btn text-white w-100 mb-2" id="latestTask">
                     Latest
                   </button>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                  <button class="btn text-white w-100" id="completeTask">
+                  <button class="btn text-white w-100 mb-2" id="completeTask">
                     Complete
                   </button>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
                   <button
                     class="btn text-white btn-danger w-100"
                     id="clearTask"
+                    style="border: none"
                   >
                     Clear Task
                   </button>
                 </div>
               </div>
-              <input
-                type="text"
-                class="form-control mt-3"
-                id="taskInput"
-                placeholder="Add new task..."
-              />
-              <ul class="list-group mt-3" id="taskList"></ul>
             </div>
           </div>
         </div>
